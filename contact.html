@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Make an Appointment</title>
+    <link rel="stylesheet" href="contact.css">
+    <script>
+        // JavaScript function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            // Show an alert message
+            alert("Thank you! Your appointment request has been submitted.");
+
+            // Reset the form fields after submission
+            document.getElementById('appointmentForm').reset();
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">হোম পেজ</a></li>
+                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                <li><a href="services.html">সেবা</a></li>
+                <li><a href="contact.html">আমাদের সাথে যোগাযোগ করুন</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h2>একটি অ্যাপয়েন্টমেন্ট করুন বা এমনকি একটি অ্যাপয়েন্টমেন্ট বুক করার জন্য কল করুন</h2>
+                    <form id="appointmentForm" onsubmit="handleFormSubmit(event)">
+                        <label for="name">পুরো নাম</label>
+                        <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম" required>
+
+                        <label for="email">ইমেইল</label>
+                        <input type="email" id="email" name="email" placeholder="আপনার ইমেইল ঠিকানা" required>
+
+                        <label for="phone">ফোন নম্বর</label>
+                        <input type="tel" id="phone" name="phone" placeholder="আপনার ফোন নম্বর" required>
+
+                        <label for="service">পছন্দের পরিষেবা</label>
+                        <select id="service" name="service" required>
+                            <option value="Maternity Care">মাতৃত্বের যত্ন</option>
+                            <option value="Gynecology">স্ত্রীরোগবিদ্যা</option>
+                            <option value="Infertility Treatment">বন্ধ্যাত্ব চিকিৎসা</option>
+                            <option value="Postpartum Care">প্রসবোত্তর যত্ন</option>
+                        </select>
+
+                        <label for="date">পছন্দের অ্যাপয়েন্টমেন্টের তারিখ</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="message">অতিরিক্ত বার্তা</label>
+                        <textarea id="message" name="message" rows="5" placeholder="কোন অতিরিক্ত বিবরণ"></textarea>
+
+                        <button type="submit">জমা দিন</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="contact-info">
+                    <h2>যোগাযোগের তথ্য</h2>
+                    <p><strong>Address:</strong> মাতৃছায়া জেনারেল হাসপাতাল, মেইন রোড (হাসপাতাল রোড), বিয়ানীবাজার, সিলেট</p>
+                    <p><strong>Phone:</strong> <a href="tel:+8801810657628">+01815803083</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:matrychaya@gmail.com">matrychaya@gmail.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:matrychaya@yahoo.com">matrychaya@yahoo.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:ikbal@live.com">ikbal@live.com</a></p>
+
+                    <h3>অফিসের সময়</h3>
+                    <p>সোমবার - শুক্রবার: 24 ঘন্টা খোলা</p>
+                    <p>শনিবার: 24 ঘন্টা খোলা</p>
+                    <p>রবিবার: 24 ঘন্টা খোলা</p>
+
+                    <!-- Embedded Google Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14664.005907882017!2d92.1582698!3d24.8263889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3751a5e7038f1f89%3A0x676ccfd44d742d53!2sMatrychaya%20General%20Hospital!5e0!3m2!1sen!2sbd!4v1697743567851!5m2!1sen!2sbd" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>মাতৃছায়া জেনারেল হাসপাতাল।</p>
+        <p>© Copy Rights Reserved to Varshini Golla and Rizwan Syed</p>
+    </footer>
+
+</body>
+</html>
